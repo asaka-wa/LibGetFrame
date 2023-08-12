@@ -57,10 +57,6 @@ local defaultFramePriorities = {
   "^oUF_.-Player",
   "^PlayerFrame",
 }
-local getDefaultFramePriorities = function()
-  return CopyTable(defaultFramePriorities)
-end
-lib.getDefaultFramePriorities = getDefaultFramePriorities
 
 local defaultPlayerFrames = {
   "^InvenUnitFrames_Player",
@@ -72,10 +68,6 @@ local defaultPlayerFrames = {
   "oUF_PlayerPlate",
   "PlayerFrame",
 }
-local getDefaultPlayerFrames = function()
-  return CopyTable(defaultPlayerFrames)
-end
-lib.getDefaultPlayerFrames = getDefaultPlayerFrames
 local defaultTargetFrames = {
   "^InvenUnitFrames_Target",
   "SUFUnittarget",
@@ -85,10 +77,6 @@ local defaultTargetFrames = {
   "oUF_.-Target",
   "TargetFrame",
 }
-local getDefaultTargetFrames = function()
-  return CopyTable(defaultTargetFrames)
-end
-lib.getDefaultTargetFrames = getDefaultTargetFrames
 local defaultTargettargetFrames = {
   "^InvenUnitFrames_TargetTarget",
   "SUFUnittargetarget",
@@ -99,10 +87,6 @@ local defaultTargettargetFrames = {
   "oUF_ToT",
   "TargetTargetFrame",
 }
-local getDefaultTargettargetFrames = function()
-  return CopyTable(defaultTargettargetFrames)
-end
-lib.getDefaultTargettargetFrames = getDefaultTargettargetFrames
 local defaultPartyFrames = {
   "^InvenUnitFrames_Party%d",
   "^AleaUI_GroupHeader",
@@ -113,27 +97,15 @@ local defaultPartyFrames = {
   "^PitBull4_Groups_Party",
   "^CompactParty",
 }
-local getDefaultPartyFrames = function()
-  return CopyTable(defaultPartyFrames)
-end
-lib.getDefaultPartyFrames = getDefaultPartyFrames
 local defaultPartyTargetFrames = {
   "SUFChildpartytarget%d",
 }
-local getDefaultPartyTargetFrames = function()
-  return CopyTable(defaultPartyTargetFrames)
-end
-lib.getDefaultPartyTargetFrames = getDefaultPartyTargetFrames
 local defaultFocusFrames = {
   "^InvenUnitFrames_Focus",
   "ElvUF_FocusTarget",
   "LUFUnitfocus",
   "FocusFrame",
 }
-local getDefaultFocusFrames = function()
-  return CopyTable(defaultFocusFrames)
-end
-lib.getDefaultFocusFrames = getDefaultFocusFrames
 local defaultRaidFrames = {
   "^Vd",
   "^HealBot",
@@ -150,10 +122,6 @@ local defaultRaidFrames = {
   "^LUFHeaderraid",
   "^CompactRaid",
 }
-local getDefaultRaidFrames = function()
-  return CopyTable(defaultRaidFrames)
-end
-lib.getDefaultRaidFrames = getDefaultRaidFrames
 
 --
 local CacheMonitorMixin = {}
@@ -463,10 +431,6 @@ local defaultOptions = {
   },
   returnAll = false,
 }
-local getDefaultOptions = function()
-  return CopyTable(defaultOptions)
-end
-lib.getDefaultOptions = getDefaultOptions
 
 local IterateGroupMembers = function(reversed, forceParty)
   local unit = (not forceParty and IsInRaid()) and 'raid' or 'party'
